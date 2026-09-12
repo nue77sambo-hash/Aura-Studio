@@ -496,3 +496,375 @@ footer {
     color: rgb(24, 95, 232);
     font-style: italic;
 }
+
+/* ================================
+   RESPONSIVE NAVIGATION
+================================ */
+
+/* Hamburger is hidden on desktop */
+.hamburger {
+    display: none;
+}
+
+
+/* ================================
+   TABLET — 768px and below
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    /* Fixed navbar */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        box-sizing: border-box;
+        padding: 0 25px;
+        background-color: rgb(250, 248, 245);
+        z-index: 1000;
+    }
+
+    /* Prevent content from hiding underneath fixed navbar */
+    main {
+        padding-top: 70px;
+    }
+
+    section,
+    footer {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /* Hide desktop navigation links */
+    .nav_middle,
+    nav button {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+        background: transparent;
+        border: 1px solid rgb(20, 20, 19);
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 16px;
+        height: 1px;
+        background-color: rgb(20, 20, 19);
+    }
+
+
+    /* ================================
+       HERO SECTION
+    ================================= */
+
+    .section_1 {
+        grid-template-columns: 1fr;
+        padding-bottom: 0;
+    }
+
+    .section_1_right {
+        order: -1;
+    }
+
+    .section_1_middle {
+        padding: 40px 25px;
+    }
+
+    .section_1_middle h1 {
+        font-size: 65px;
+        line-height: 60px;
+    }
+
+    .section_1_middle p {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .section_1_bottom {
+        padding: 0 25px 40px;
+    }
+
+    .section_1_bottom button {
+        width: 140px;
+        height: 48px;
+    }
+
+    .aura_visual {
+        height: 380px;
+    }
+
+
+    /* ================================
+       GENERAL SECTIONS
+    ================================= */
+
+    .section_2,
+    .section_3,
+    .section_4 {
+        grid-template-columns: 1fr;
+        padding: 80px 25px;
+    }
+
+    .section_2_left,
+    .section_3_left,
+    .section_4_left {
+        border-right: none;
+        border-bottom: 1px solid rgb(229, 225, 216);
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .section_2_right,
+    .section_3_right,
+    .section_4_right {
+        padding: 0;
+    }
+
+
+    /* ABOUT / LARGE TEXT */
+
+    .section_2_right p:nth-child(2) {
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    .section_2_right p:nth-child(3) {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* ================================
+       SERVICES
+    ================================= */
+
+    .service-header {
+        width: auto;
+        max-width: 100%;
+        font-size: 50px;
+        line-height: 1;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .services_left {
+        gap: 30px;
+    }
+
+    .service_description p:nth-child(1) {
+        font-size: 18px;
+    }
+
+
+    /* ================================
+       SECTION 4 / CONTACT
+    ================================= */
+
+    .section_4_right {
+        flex-direction: column;
+    }
+
+    .section_4_text p:nth-child(2),
+    .section_4_text p:nth-child(3) {
+        font-size: 50px;
+        line-height: 50px;
+        width: auto;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+
+    /* ================================
+       FOOTER
+    ================================= */
+
+    footer {
+        padding: 0 25px;
+    }
+
+    .footer_top {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+    }
+}
+
+
+/* ================================
+   SMALL PHONES — 480px and below
+================================ */
+
+@media (max-width: 480px) {
+
+    nav {
+        height: 64px;
+        padding: 0 18px;
+    }
+
+    main {
+        padding-top: 64px;
+    }
+
+    section,
+    footer {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    /* HERO */
+
+    .section_1_middle {
+        padding: 35px 20px;
+    }
+
+    .section_1_middle h1 {
+        font-size: 48px;
+        line-height: 46px;
+    }
+
+    .section_1_middle p {
+        font-size: 15px;
+    }
+
+    .section_1_bottom {
+        padding: 0 20px 35px;
+        flex-wrap: wrap;
+    }
+
+    .section_1_bottom button {
+        width: 130px;
+        height: 45px;
+    }
+
+
+    /* ANIMATION */
+
+    .aura_visual {
+        height: 320px;
+    }
+
+    .aura_shape {
+        width: 190px;
+        height: 190px;
+    }
+
+    .aura_core {
+        width: 90px;
+        height: 90px;
+    }
+
+    .aura_core span {
+        font-size: 60px;
+    }
+
+    .aura_glow {
+        width: 230px;
+        height: 230px;
+    }
+
+    .floating_element {
+        font-size: 7px;
+        padding: 7px 8px;
+    }
+
+    .element_one {
+        left: 5%;
+        top: 70px;
+    }
+
+    .element_two {
+        right: 3%;
+        top: 150px;
+    }
+
+    .element_three {
+        left: 8%;
+        bottom: 55px;
+    }
+
+
+    /* SECTIONS */
+
+    .section_2,
+    .section_3,
+    .section_4 {
+        padding: 65px 20px;
+    }
+
+    .section_2_right p:nth-child(2) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .section_2_right p:nth-child(3) {
+        font-size: 15px;
+    }
+
+
+    /* SERVICES */
+
+    .service-header {
+        font-size: 40px;
+    }
+
+    .services_left {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+
+    /* CONTACT */
+
+    .section_4_text p:nth-child(2),
+    .section_4_text p:nth-child(3) {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 0 20px;
+    }
+}
