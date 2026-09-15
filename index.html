@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
 </head>
 
+
 <body>
-    <main>
+    <main id="top">
         <nav>
             <div class="nav_left">
                 <div class="logo_circle"></div>
@@ -18,19 +20,29 @@
                 <p class="Location1">LONDON</p>
             </div>
             <div class="nav_middle">
-                <p>About</p>
-                <P>Services</P>
-                <p>Contact</p>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="nav_right">
-                <button>Let's Talk <img src="/images/icons8-up-right-32.png" alt="" width="16px" height="16px"></button>
+            <div class="nav_right" id="#contact">
+                <button>Let's Talk <span class="arrow">↗</span></button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
-        <button class="hamburger" aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+
+        <div class="mobile_menu" id="mobileMenu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="mobile_menu_cta">
+                Let's Talk ↗
+            </a>
+        </div>
+
         <section class="section_1">
             <div class="section_1_right">
                 <div class="section_1_right_top">
@@ -43,8 +55,8 @@
                         and modern web design.</p>
                 </div>
                 <div class="section_1_bottom">
-                    <button>Start a Project</button>
-                    <button>Explore Services</button>
+                    <button>Start a Project ↗</button>
+                    <button>Explore Services ↗</button>
                 </div>
             </div>
             <div class="section_1_right">
@@ -82,7 +94,7 @@
                 </div>
             </div>
         </section>
-        <section class="section_2">
+        <section class="section_2" id="about">
             <div class="section_2_left">02 - About</div>
             <div class="section_2_right">
                 <p>A DIFFERENT KIND OF STUDIO</p>
@@ -91,7 +103,7 @@
                     remember.</p>
             </div>
         </section>
-        <section class="section_3">
+        <section class="section_3" id="services">
             <div class="section_3_left">03 - Services</div>
             <div class="section_3_right">
                 <p>WHAT WE DO</p>
@@ -101,9 +113,15 @@
                         <div class="services_left">
                             <p class="no">01</p>
                             <div class="service_description">
-                                <p>Branding</p>
-                                <p>We create identities thaat give brands a distinct voice, visual language and
-                                    presence.</p>
+                                <div class="service_img">
+                                    <img src="images/cherry-account-access.png"
+                                    width="160px" height="160px">
+                                </div>
+                                <div class="service_text">
+                                    <p>Branding</p>
+                                    <p>We create identities thaat give brands a distinct voice, visual language and
+                                        presence.</p>
+                                </div>
                             </div>
                         </div>
                         <img alt="" src="images/icons8-up-right-32.png" width="16px" height="16px">
@@ -112,9 +130,16 @@
                         <div class="services_left">
                             <p class="no">02</p>
                             <div class="service_description">
-                                <p>UI / UX Design</p>
-                                <p>We design digital experiences that feel intuitive, intentional and genuinely human.
-                                </p>
+                                <div class="service_img">
+                                    <img src="images/cherry-developer-with-wrench-and-landing-page-layout-website-maintenance-and-ui-design.png"
+                                    width="190px">
+                                </div>
+                                <div class="service_text">
+                                    <p>UI / UX Design</p>
+                                    <p>We design digital experiences that feel intuitive, intentional and genuinely
+                                        human.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <img alt="" src="images/icons8-up-right-32.png" width="16px" height="16px">
@@ -123,8 +148,14 @@
                         <div class="services_left">
                             <p class="no">03</p>
                             <div class="service_description">
-                                <p>Web Design</p>
-                                <p>We turn strategy into modern websites built to communicate, connect and perform.</p>
+                                <div class="service_img">
+                                    <img src="images/cherry-website-designers-showing-website-mockup.png" width="160px">
+                                </div>
+                                <div class="service_text">
+                                    <p>Web Design</p>
+                                    <p>We turn strategy into modern websites built to communicate, connect and perform.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <img alt="" src="images/icons8-up-right-32.png" width="16px" height="16px">
@@ -133,7 +164,7 @@
                 <div class="empty_div"></div>
             </div>
         </section>
-        <section class="section_4">
+        <section class="section_4" id="contact">
             <div class="section_4_left">04 - Contact</div>
             <div class="section_4_right">
                 <div class="section_4_text">
@@ -167,8 +198,7 @@
                                 required></textarea>
                         </div>
                         <button type="submit" class="send-button">
-                            Send Message
-                            <img alt="" src="images/icons8-up-right-32.png">
+                            Send Message ↗
                         </button>
                     </form>
                 </div>
@@ -181,19 +211,19 @@
                         <div class="logo_circle"></div>
                         <p class="logo">AURA STUDIO</p>
                     </div>
-                    <p>"Bringing Ideas to Life"</p>
+                    <i>"Bringing Ideas to Life"</i>
                 </div>
                 <div class="footer_top_middle">
-                    <p>EXPLORE</p>
+                    <p class="footer_header">EXPLORE</p>
                     <li>
-                        <ul>About</ul>
-                        <ul>Services</ul>
-                        <ul>Contact</ul>
+                        <ul><a href="#about">About</a></ul>
+                        <ul><a href="#services">Services</a></ul>
+                        <ul><a href="#contact">Contact</a></ul>
                     </li>
                 </div>
                 <div class="footer_top_right">
-                    <p>CONNECT</p>
-                    <P>customerservicea@aurastudio.co</P>
+                    <p class="footer_header">CONNECT</p>
+                    <P class="email">customerservicea@aurastudio.co</P>
                     <p>London, UK</p>
                 </div>
             </div>
@@ -203,6 +233,9 @@
             </div>
         </footer>
     </main>
+    <a href="#top" class="back_to_top" aria-label="Back to top">
+        ↑
+    </a>
 </body>
 
 </html>
